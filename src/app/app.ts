@@ -1,15 +1,16 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { WeatherApiService } from './shared/services/weather-api-service';
+import { Search } from './search/search';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [Search],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App implements OnInit {
-  protected readonly title = signal('weather-app');
+  protected readonly title = signal('Weather Application');
 
   constructor(private weatherService: WeatherApiService){
 

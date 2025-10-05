@@ -1,0 +1,21 @@
+.form {
+  flex-grow: 1;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+}
+
+.button-row{
+  display: flex;
+  align-items: center;
+  background-color: #1e90ff;
+  margin-left: 5px;
+  border-radius: 20px;
+  border: 1px solid;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.button-row:hover{
+  border-color: transparent;
+}
