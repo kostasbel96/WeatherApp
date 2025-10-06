@@ -6,7 +6,7 @@
         <app-search (searchEvent)="onSearch($event)"></app-search>
     </div>
     <div>
-        <app-weather-card  [weatherData]="data"></app-weather-card>
+        <app-weather-card [firstTry]="first" [weatherData]="data"></app-weather-card>
     </div>
 </div>
 

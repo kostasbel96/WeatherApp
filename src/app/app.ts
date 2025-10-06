@@ -12,18 +12,19 @@ import { WeatherCard } from "./weather-card/weather-card";
 export class App {
   protected readonly title = signal('Weather Application');
   data: any;
-
+  first = true;
 
   constructor(private weatherService: WeatherApiService){
 
   }
    
-  async onSearch(city: string){
+  onSearch(city: string){
     this.weatherService
       .getWeatherDataByCityName(city)
-      .subscribe({next: data => this.data = data,
+      .subscribe({next:  data => this.data = data,
                   error: err=> this.data = undefined
                 });
+      this.first = false;
       console.log(this.data)
   }
 

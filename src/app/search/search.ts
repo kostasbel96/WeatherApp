@@ -19,7 +19,7 @@ export class Search {
   searchEvent = new EventEmitter<string>();
   city = '';
 
-  async onSearch() {
+  onSearch() {
     this.searchEvent.emit(this.city);
   }
 }
