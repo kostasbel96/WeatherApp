@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
@@ -14,6 +14,11 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './search.css'
 })
 export class Search {
-  town = 'search';
 
+  @Output() searchEvent = new EventEmitter<string>();
+  city = '';
+
+   onSearch() {
+    this.searchEvent.emit(this.city);
+  }
 }

@@ -1,26 +1,28 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { WeatherApiService } from './shared/services/weather-api-service';
 import { Search } from './search/search';
+import { WeatherCard } from "./weather-card/weather-card";
 
 @Component({
   selector: 'app-root',
-  imports: [Search],
+  imports: [Search, WeatherCard],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App implements OnInit {
+export class App {
   protected readonly title = signal('Weather Application');
+  data: any;
+
 
   constructor(private weatherService: WeatherApiService){
 
   }
    
-
-  ngOnInit(){
+  onSearch(city: string){
     this.weatherService
-    .getWeatherDataByCityName("Athens")
-    .subscribe(data => console.log(data));
+      .getWeatherDataByCityName(city)
+      .subscribe(data => this.data = data);
+      console.log(this.data)
   }
 
 }
