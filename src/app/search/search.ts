@@ -15,10 +15,11 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class Search {
 
-  @Output() searchEvent = new EventEmitter<string>();
+  @Output() 
+  searchEvent = new EventEmitter<string>();
   city = '';
 
-   onSearch() {
+  async onSearch() {
     this.searchEvent.emit(this.city);
   }
 }

@@ -1,14 +1,28 @@
-<mat-card [hidden]="true" class="card" appearance="outlined">
+@if(weatherData){
+  <mat-card [hidden]="true" class="card" appearance="outlined">
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    
+    <mat-card-title>{{weatherData.name}}</mat-card-title>
+    <mat-card-subtitle>{{weatherData.weather[0].description}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="https://material.angular.dev/assets/img/examples/shiba2.jpg" alt="Weather Icon">
+  <img mat-card-image [src]="image" alt="Weather Icon">
   <mat-card-content>
-    <p>
-      {{weatherData.name}}
+    
+      <p>
+      
+        {{weatherData.name}}
+      
     </p>
+  
+    
   </mat-card-content>
 </mat-card>
+
+}
+@else if(!first){
+  <p>not found</p>
+}
+@else {
+  <p>Welcome!</p>
+}
 

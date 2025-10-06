@@ -18,10 +18,12 @@ export class App {
 
   }
    
-  onSearch(city: string){
+  async onSearch(city: string){
     this.weatherService
       .getWeatherDataByCityName(city)
-      .subscribe(data => this.data = data);
+      .subscribe({next: data => this.data = data,
+                  error: err=> this.data = undefined
+                });
       console.log(this.data)
   }
 
