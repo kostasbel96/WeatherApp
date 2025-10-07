@@ -1,10 +1,11 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import { DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-weather-card',
-  imports: [MatButtonModule, MatCardModule],
+  imports: [MatButtonModule, MatCardModule, DecimalPipe],
   templateUrl: './weather-card.html',
   styleUrl: './weather-card.css'
 })
