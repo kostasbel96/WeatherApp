@@ -13,12 +13,13 @@ export class App {
   protected readonly title = signal('Weather Application');
   data: any;
   first = true;
-
+  city?: string;
   constructor(private weatherService: WeatherApiService){
 
   }
    
   onSearch(city: string){
+    this.city = city;
     this.weatherService
       .getWeatherDataByCityName(city)
       .subscribe({next:  data => this.data = data,

@@ -13,7 +13,7 @@
 </mat-card>
 }
 @else if(!firstTry){
-  <p>Not found!</p>
+  <app-not-found-component [nameOfCity]="city"></app-not-found-component>
 }
 @else if(firstTry){
   <p>Welcome!</p>
