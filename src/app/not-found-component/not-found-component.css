@@ -1,7 +1,6 @@
 mat-card-content{
     color: #2c3e50;
-    font-weight:900;
-    
+    font-weight:900; 
 }
 .error{
     background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
@@ -14,7 +13,10 @@ mat-card-content{
     display: flex;
     align-items: center;
     margin-right: 10px;
-    animation: slide-fade 0.2s;
+}
+
+.error.animate {
+  animation: slide-fade 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 .error:hover{
@@ -23,10 +25,12 @@ mat-card-content{
 }
 
 @keyframes slide-fade {  
-    from {        
-        transform: translateY(300px);  
+    from {   
+        opacity: 0;     
+        transform: translateY(100px);  
     }  
     to {    
+        opacity: 1;
         transform: translateY(0);  
     }
 }

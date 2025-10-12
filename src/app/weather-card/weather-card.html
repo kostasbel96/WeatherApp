@@ -1,18 +1,18 @@
-@if(weatherData){
-  <mat-card class="card" appearance="outlined">
-  <mat-card-header>
-    <mat-card-title>{{weatherData.name + ", " +weatherData.sys.country}}</mat-card-title>
-  </mat-card-header>
-  <img mat-card-image [src]="image" alt="Weather Icon">
-  <mat-card-content>
-    <ul>
-      <li>Weather: {{weatherData.weather[0].description}}</li>
-      <li>Temprature: {{weatherData.main.temp| number: '1.0-0'}}&deg;</li>
-    </ul>
-  </mat-card-content>
+@if(showCard && weatherData !== undefined){
+  <mat-card class="card" [class.animate]="animationTrigger" appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>{{weatherData.name + ", " +weatherData.sys.country}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="image" alt="Weather Icon">
+    <mat-card-content>
+      <ul>
+        <li>Weather: {{weatherData.weather[0].description}}</li>
+        <li>Temprature: {{weatherData.main.temp| number: '1.0-0'}}&deg;</li>
+      </ul>
+    </mat-card-content>
 </mat-card>
 }
-@else if(!firstTry){
+@else if(weatherData === undefined && !firstTry){
   <app-not-found-component [nameOfCity]="city"></app-not-found-component>
 }
 @else if(firstTry){

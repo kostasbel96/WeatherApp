@@ -1,4 +1,10 @@
-<mat-card-header class="error">
+@if(showError){
+    
+<div class="error" [class.animate]="animationTrigger" >
+    <mat-card-header>
     <mat-card-content>City with name {{nameOfCity}}, doesn't exist! Please try again.</mat-card-content>
-<mat-card-header>
+    </mat-card-header>
+</div>
+}
+
 

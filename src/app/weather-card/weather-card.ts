@@ -19,12 +19,20 @@ export class WeatherCard{
   city?: string
   
   image!: string;
-  
+  animationTrigger = false;
+  showCard = false;
+
   ngOnChanges(){
     if (this.weatherData && this.weatherData.weather && this.weatherData.weather.length > 0){
       this.image = `http://openweathermap.org/img/wn/${this.weatherData.weather[0].icon}@2x.png`;
     }
-    
+
+    this.showCard = false;
+    this.animationTrigger = false;
+    setTimeout(() => {
+        this.showCard = true;
+        this.animationTrigger = true;
+      }, 50);
   }
 
 }

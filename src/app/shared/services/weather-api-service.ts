@@ -12,6 +12,6 @@ export class WeatherApiService {
   http: HttpClient = inject(HttpClient);
   
   getWeatherDataByCityName(city: string): Observable<any>{
-    return this.http.get(`${weatherApi}?q=${city}&appid=${environment.weatherApiKey}&units=metric&lang=el`);
+    return this.http.get(`${weatherApi}?q=${city}&appid=${environment.weatherApiKey}&units=metric&lang=en`);
   }
 }

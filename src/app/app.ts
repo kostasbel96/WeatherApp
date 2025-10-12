@@ -26,7 +26,6 @@ export class App {
                   error: err=> this.data = undefined
                 });
       this.first = false;
-      console.log(this.data)
   }
 
 }
