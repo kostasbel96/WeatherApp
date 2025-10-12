@@ -17,6 +17,7 @@ mat-card-content{
 
 .error.animate {
   animation: slide-fade 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  opacity: 1;
 }
 
 .error:hover{

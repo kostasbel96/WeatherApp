@@ -5,6 +5,7 @@
 
 .card.animate {
   animation: slide-fade 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  opacity: 1;
 }
 
 img{
@@ -26,7 +27,7 @@ li{
 @keyframes slide-fade {  
     from {     
         opacity: 0;  
-        transform: translateY(200px);  
+        transform: translateY(100px);  
     }  
     to {    
         opacity: 1;

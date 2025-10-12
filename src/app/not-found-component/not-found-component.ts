@@ -18,6 +18,6 @@ export class NotFoundComponent implements OnChanges{
     this.showError = false;
     setTimeout(() => {
       this.animationTrigger = true
-      this.showError = true;}, 50);
+      this.showError = true;}, 100);
   }
 }
