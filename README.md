@@ -1,14 +1,61 @@
 # WeatherApp
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.2.
+A weather forecasting application built with Angular. This app fetches real-time weather data using a configurable API key.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have installed:
+
+* [Node.js](https://nodejs.org/)
+* [Angular CLI](https://angular.io/cli)
+
+### Installation
+
+1. Clone the repository:
 
 ```bash
-ng serve
+git clone https://github.com/kostasbel96/WeatherApp.git
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+2. Navigate into the project directory:
 
+```bash
+cd WeatherApp
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+---
+
+## 🔑 API Key Configuration
+
+Before running the app, you need to provide your weather API key.
+
+Replace `'ADD_YOUR_API_KEY'` in environment.ts file with your actual API key from your weather service.
+
+
+---
+
+## 🏃 Running the Application
+
+Start the development server:
+
+```bash
+ng serve --configuration=environment
+```
+
+Open your browser and go to `http://localhost:4200/`. The application will reload automatically if you make changes to the source files.
+
+---
+
+## ℹ️ About
+
+WeatherApp is an Angular-based application that allows users to view current weather data for different locations. The app fetches data using a configurable API key, keeping sensitive information secure and separate from the repository.
