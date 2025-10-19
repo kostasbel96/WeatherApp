@@ -12,7 +12,7 @@ npm-debug.log
 yarn-error.log
 
 #apikey
-src/environments/environment.ts
+src/environments/apikey.ts
 
 
 # IDEs and editors
