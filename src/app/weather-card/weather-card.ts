@@ -69,7 +69,7 @@ export class WeatherCard implements OnChanges {
   ngOnChanges(): void {
     console.log(this.weatherData);
     if (this.weatherData && this.weatherData.weather && this.weatherData.weather.length > 0) {
-      this.image = `http://openweathermap.org/img/wn/${this.weatherData.weather[0].icon}@2x.png`;
+      this.image = `https://openweathermap.org/img/wn/${this.weatherData.weather[0].icon}@2x.png`;
       this.showCard = false;
       this.animationTrigger = false;
       setTimeout(() => {
