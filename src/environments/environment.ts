@@ -1,4 +1,4 @@
-import { apiKey } from "./apiKey";
+// import { apiKey } from "./apiKey";
 
 /**
  * Environment configuration object for the Weather Application.
@@ -15,5 +15,5 @@ export const environment = {
    * API key used to access the OpenWeatherMap API.
    * Defaults to a placeholder string if no key is provided in `apiKey`.
    */
-  weatherApiKey: apiKey || "ADD_YOUR_API_KEY"
+  weatherApiKey: "ADD_YOUR_API_KEY"
 };

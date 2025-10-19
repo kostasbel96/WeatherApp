@@ -12,7 +12,7 @@ npm-debug.log
 yarn-error.log
 
 #apikey
-# src/environments/apikey.ts
+src/environments/apikey.ts
 
 #vercel config
 vercel.json
