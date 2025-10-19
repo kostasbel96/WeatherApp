@@ -1,0 +1,14 @@
+.welcome{
+    width: 300px;
+    transition: 0.3s ease;
+}
+
+mat-card-header{
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.welcome:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(6, 6, 6, 0.6);
+}

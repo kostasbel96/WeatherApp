@@ -3,10 +3,11 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { DecimalPipe } from '@angular/common';
 import { NotFoundComponent } from '../not-found-component/not-found-component';
+import { WelcomeComponent } from '../welcome-component/welcome-component';
 
 @Component({
   selector: 'app-weather-card',
-  imports: [MatButtonModule, MatCardModule, DecimalPipe, NotFoundComponent],
+  imports: [MatButtonModule, MatCardModule, DecimalPipe, NotFoundComponent, WelcomeComponent],
   templateUrl: './weather-card.html',
   styleUrl: './weather-card.css'
 })
@@ -23,6 +24,7 @@ export class WeatherCard{
   showCard = false;
 
   ngOnChanges(){
+    console.log(this.weatherData);
     if (this.weatherData && this.weatherData.weather && this.weatherData.weather.length > 0){
       this.image = `http://openweathermap.org/img/wn/${this.weatherData.weather[0].icon}@2x.png`;
       this.showCard = false;

@@ -7,7 +7,7 @@
     <mat-card-content>
       <ul>
         <li>Weather: {{weatherData.weather[0].description}}</li>
-        <li>Temprature: {{weatherData.main.temp| number: '1.0-0'}}&deg;</li>
+        <li>Temprature: {{weatherData.main.temp| number: '1.0-0'}}&deg;C</li>
       </ul>
     </mat-card-content>
 </mat-card>
@@ -16,6 +16,6 @@
   <app-not-found-component [nameOfCity]="city"></app-not-found-component>
 }
 @else if(firstTry){
-  <p>Welcome!</p>
+  <app-welcome-component></app-welcome-component>
 }
 
