@@ -1,5 +1,5 @@
 <div class="container">
-    <form class="form">
+    <form class="form" (keyup.enter)="onSearch()">
         <mat-form-field>
             <mat-label>Enter Town</mat-label>
             <input matInput [(ngModel)]="city" [ngModelOptions]="{standalone: true}">
