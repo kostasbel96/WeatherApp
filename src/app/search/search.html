@@ -1,11 +1,11 @@
 <div class="container">
-    <form class="form" (keyup.enter)="onSearch()">
+    <form class="form">
         <mat-form-field>
             <mat-label>Enter Town</mat-label>
-            <input matInput [(ngModel)]="city" [ngModelOptions]="{standalone: true}">
+            <input matInput [(ngModel)]="city" [ngModelOptions]="{standalone: true}" (keyup.enter)="onSearch()">
         </mat-form-field>
     </form>
     <div  class="button-row">
-        <button (click)="onSearch()" matButton="tonal">Search</button>
+        <button matButton="tonal" (click)="onSearch()" >Search</button>
     </div>
 </div>
